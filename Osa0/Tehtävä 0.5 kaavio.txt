@@ -1,0 +1,34 @@
+title https://studies.cs.helsinki.fi/exampleapp/spa
+
+note over selain:
+Käyttäjä menee osoitteeseen
+https://studies.cs.helsinki.fi/exampleapp/spa
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+palvelin-->selain: HTML
+
+note over selain:
+HTML-koodi pyytää tiedostoja
+/exampleapp/main.css ja
+/exampleapp/spa.js
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: main.css
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin-->selain: spa.js
+
+note over selain:
+spa.json luo tapahtumakäsittelijän
+ja pyytää tiedostoa
+/exampleapp/data.json
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin-->selain: data.json
+
+note over selain:
+tapahtumakäsittelijä luo listan
+ja täyttää sen data.json muistiinpanoilla
