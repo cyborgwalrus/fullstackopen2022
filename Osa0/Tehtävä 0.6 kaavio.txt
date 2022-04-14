@@ -1,0 +1,26 @@
+note over selain:
+Käyttäjä kirjoittaa lomakkeeseen
+tekstiä ja painaa Save-nappia
+end note
+
+note over selain:
+spa.js lisää lomakkeen datan
+omaan listaansa
+end note
+
+note over selain:
+spa.js lähettää lomakkeen datan
+serverille HTTP POST pyynnöllä
+end note
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+selain-->palvelin: lomakkeen data
+
+note over palvelin:
+palvelin lisää datan
+data.json tiedostoon
+ja vastaa koodilla 201
+end note
+
+palvelin->selain: 201
+palvelin-->selain: {"message":"note created"}
