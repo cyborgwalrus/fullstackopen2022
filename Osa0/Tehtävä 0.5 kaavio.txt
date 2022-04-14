@@ -1,4 +1,4 @@
-title https://studies.cs.helsinki.fi/exampleapp/spa
+title SPA-sivun lataus
 
 note over selain:
 Käyttäjä menee osoitteeseen
