@@ -1,5 +1,3 @@
-import { Component, useReducer } from "react"
-
 const Header = (props) => {
   return (
     <div>
@@ -20,9 +18,9 @@ const Part = (props) => {
 const Content = (props) => {
   return (
     <div>
-      <Part part={props.parts[0]} exercise={props.exercises[0]}/>
-      <Part part={props.parts[1]} exercise={props.exercises[1]}/>
-      <Part part={props.parts[2]} exercise={props.exercises[2]}/>
+      <Part part={props.parts[0]} exercise={props.exercises[0]} />
+      <Part part={props.parts[1]} exercise={props.exercises[1]} />
+      <Part part={props.parts[2]} exercise={props.exercises[2]} />
     </div>
   )
 }
@@ -30,8 +28,8 @@ const Content = (props) => {
 const Total = (props) => {
   let sum = 0
   for (let i = 0; i < props.excersises.length; i++) {
-    sum = props.excersises[i];
-    
+    sum += props.excersises[i];
+
   }
   return (
     <p>Number of exercises {sum}</p>
@@ -48,13 +46,13 @@ const App = () => {
   const part3 = 'State of a component'
   const exercises3 = 14
 
-  const parts = [part1,part2,part3]
-  const exercises = [exercises1,exercises2,exercises3]
+  const parts = [part1, part2, part3]
+  const exercises = [exercises1, exercises2, exercises3]
   return (
     <div>
       <Header headertext={course} />
-      <Content  parts={parts} exercises={exercises}/>
-      <Total exercises={exercises}/>
+      <Content parts={parts} exercises={exercises} />
+      <Total excersises={exercises} />
     </div>
   )
 }
